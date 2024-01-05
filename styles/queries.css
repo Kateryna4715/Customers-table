@@ -1,0 +1,79 @@
+@media screen and (max-width: 98rem) {
+  @media screen and (max-width: 74rem) {
+    .wrapper {
+      gap: 3rem;
+    }
+
+    .main-content {
+      overflow: scroll;
+    }
+
+    .main {
+      padding-right: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 60rem) {
+  .wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 5rem;
+  }
+  .aside {
+    padding: 0 2.4rem;
+    height: fit-content;
+    width: 100%;
+  }
+  .aside--heading {
+    padding-top: 2rem;
+    margin: 0;
+    height: max-content;
+    align-items: flex-start;
+  }
+  .aside-content {
+    flex-direction: row;
+    align-items: center;
+  }
+  .aside--nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3.2rem;
+    width: 70%;
+  }
+  .btn--nav {
+    width: 16rem;
+    height: max-content;
+  }
+  .author {
+    width: 18rem;
+    align-self: center;
+  }
+
+  .main {
+    width: 90%;
+    padding-right: 0;
+    margin: 0 auto;
+  }
+
+  .main-content {
+    overflow: scroll;
+  }
+
+  th {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 44rem) {
+  .pagination-container__message {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 34rem) {
+  .aside {
+    display: none;
+  }
+}
