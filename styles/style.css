@@ -27,6 +27,7 @@ body {
 .main {
   width: 66%;
   flex-shrink: 0;
+  min-height: 100vh;
 }
 .main__greeting {
   font-size: 2.4rem;
@@ -41,8 +42,8 @@ body {
 
 .main-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 3rem 4rem 0 3.8rem;
 }
 .main-header-info {
@@ -154,13 +155,15 @@ td {
   height: 2.4rem;
   width: 2.5rem;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 .pagination-btn:hover {
   border: 1px solid #5932ea;
   background: #5932ea;
+  color: #fff;
+  border: none;
 }
 .pagination-btn:hover .btn-icon {
   stroke: #fff;
@@ -175,7 +178,7 @@ td {
   height: 2.4rem;
   width: 2.5rem;
   cursor: pointer;
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: #404b52;
@@ -203,7 +206,7 @@ td {
   filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
   background-color: #fff;
   width: 30.6rem;
-  min-height: inherit;
+  height: inherit;
   flex-shrink: 0;
   padding: 3.6rem 2.8rem 7.6rem;
 }
@@ -262,8 +265,10 @@ td {
   gap: 1.4rem;
 }
 .btn--nav:hover {
+  border: 1px solid #5932ea;
   background: #5932ea;
   color: #fff;
+  border: none;
 }
 
 .btn--nav.customers {
@@ -275,14 +280,13 @@ td {
 .author__img {
   width: 4.2rem;
   height: 4.2rem;
-  flex-shrink: 0;
   border-radius: 4.2rem;
 }
 
 .author {
   display: flex;
-  gap: 1.2rem;
   align-items: center;
+  gap: 1.2rem;
   position: sticky;
   bottom: 6rem;
 }/*# sourceMappingURL=style.css.map */

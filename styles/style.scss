@@ -4,6 +4,23 @@
   letter-spacing: -0.014rem;
 }
 
+@mixin centeredFlex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin alignedFlex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin selectedBtn {
+  border: 1px solid #5932ea;
+  background: #5932ea;
+  color: #fff;
+}
+
 @mixin paginationBtn {
   border-radius: 0.4rem;
   border: 1px solid #eee;
@@ -12,9 +29,7 @@
   width: 2.5rem;
   cursor: pointer;
 
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex;
 }
 
 * {
@@ -37,15 +52,15 @@ body {
 .wrapper {
   display: flex;
   flex-direction: row-reverse;
-  // gap: 7.1rem;
+  gap: 7.1rem;
   justify-content: start;
-
   max-height: max-content;
 }
 
 .main {
   width: 66%;
   flex-shrink: 0;
+  min-height: 100vh;
 
   &__greeting {
     font-size: 2.4rem;
@@ -61,9 +76,8 @@ body {
 }
 
 .main-header {
-  display: flex;
+  @include alignedFlex;
   justify-content: space-between;
-  align-items: center;
   padding: 3rem 4rem 0 3.8rem;
 
   &-info {
@@ -85,8 +99,7 @@ body {
 }
 
 .search {
-  display: flex;
-  align-items: center;
+  @include alignedFlex;
   width: 21.6rem;
   height: 3.8rem;
   background: #f9fbff;
@@ -132,9 +145,7 @@ td {
 }
 
 .table__status {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex;
 
   padding: 0.4rem 0.8rem;
   margin-right: 4rem;
@@ -165,9 +176,7 @@ td {
 }
 
 .pagination {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centeredFlex;
   gap: 1.2rem;
 
   &-btn {
@@ -176,8 +185,8 @@ td {
   }
 
   &-btn:hover {
-    border: 1px solid #5932ea;
-    background: #5932ea;
+    @include selectedBtn;
+    border: none;
   }
 
   &-btn:hover .btn-icon {
@@ -195,15 +204,11 @@ td {
   letter-spacing: -0.012rem;
 
   &:hover {
-    border: 1px solid #5932ea;
-    background: #5932ea;
-    color: #fff;
+    @include selectedBtn;
   }
 
   &.selected {
-    border: 1px solid #5932ea;
-    background: #5932ea;
-    color: #fff;
+    @include selectedBtn;
   }
 }
 
@@ -217,13 +222,12 @@ td {
   filter: drop-shadow(0px 10px 60px rgba(226, 236, 249, 0.5));
   background-color: #fff;
   width: 30.6rem;
-  min-height: inherit;
+  height: inherit;
   flex-shrink: 0;
   padding: 3.6rem 2.8rem 7.6rem;
 
   &--heading {
-    display: flex;
-    align-items: center;
+    @include alignedFlex;
     gap: 0.8rem;
 
     &-icon {
@@ -262,8 +266,7 @@ td {
 
 .btn--nav {
   margin-bottom: 1.7rem;
-  display: flex;
-  align-items: center;
+  @include alignedFlex;
   justify-content: space-between;
   gap: 1.4rem;
 
@@ -276,35 +279,29 @@ td {
   cursor: pointer;
 
   &-desc {
-    display: flex;
-    align-items: center;
+    @include alignedFlex;
     gap: 1.4rem;
   }
 
   &:hover {
-    background: #5932ea;
-    color: #fff;
+    @include selectedBtn;
+    border: none;
   }
 }
 
 .btn--nav.customers {
-  border: 1px solid #5932ea;
-  background: #5932ea;
-  color: #fff;
+  @include selectedBtn;
 }
 
 .author__img {
   width: 4.2rem;
   height: 4.2rem;
-  flex-shrink: 0;
   border-radius: 4.2rem;
 }
 
 .author {
-  display: flex;
+  @include alignedFlex;
   gap: 1.2rem;
-  align-items: center;
-
   position: sticky;
   bottom: 6rem;
 }
